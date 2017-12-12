@@ -5,5 +5,4 @@ flask-restful-swagger
 celery
 redis
 gunicorn
-virtualenv
 junos-eznc
