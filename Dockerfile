@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 
 RUN apk add --no-cache --update ${INSTALL_PKG} \
     && virtualenv /env \
-    && /ev/bin/ansible-galaxy install Juniper.junos \
+    && /env/bin/ansible-galaxy install Juniper.junos \
     && /env/bin/pip install --no-cache-dir -r /root/config/requirements.txt \
     && rm -rf /var/cache/apk/* \
     && chmod +x /usr/src/app/inventory.py
