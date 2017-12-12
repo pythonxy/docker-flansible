@@ -3,7 +3,7 @@ version: '2'
 services:
 
   flansible:
-    image: playniuniu/flansible
+    image: pythonxy/flansible
     ports:
       - '8000:8000'
     volumes:
@@ -13,7 +13,7 @@ services:
       - "celery"
 
   celery:
-    image: playniuniu/flansible
+    image: pythonxy/flansible
     command: /env/bin/celery worker -A flansible.celery --loglevel=info
     volumes:
       - '~/vol/ansible:/data'
@@ -22,7 +22,7 @@ services:
       - "redis"
 
   flower:
-    image: playniuniu/flower
+    image: pythonxy/flower
     ports:
       - '5555:5555'
     restart: always
