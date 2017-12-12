@@ -14,7 +14,6 @@ RUN apk add --no-cache --update ${INSTALL_PKG} \
     && /env/bin/pip install --no-cache-dir -r /root/config/requirements.txt \
     && rm -rf /var/cache/apk/* \
     && chmod +x /usr/src/app/inventory.py
-RUN ansible-galaxy install Juniper.junos
 
 VOLUME /data
 EXPOSE 8000
